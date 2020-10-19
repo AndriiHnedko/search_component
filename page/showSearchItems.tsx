@@ -8,7 +8,7 @@ import {
 } from "../../reducers/search/actions";
 import { cleanData, setData } from "../../reducers/dishesList/actions";
 
-import SubCategory from "../subCategory";
+import DishesList from "../DishesList";
 import i18n from "i18n-js";
 import { RootStateType } from "../../reducers";
 import { ShowSearchItemsPropsType } from "./types";
@@ -67,7 +67,7 @@ export class ShowSearchItems extends React.PureComponent<
     const { props } = this;
     const color = props.theme.header.container.backgroundColor;
     return (
-      <SubCategory
+      <DishesList
         navigation={props.navigation}
         color={color}
         title={`${i18n.t("search")} "${props.route.params.value}"`}
